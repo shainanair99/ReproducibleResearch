@@ -1,3 +1,7 @@
+dailysum <- tapply(df_ign$steps, df_ign$date, sum, na.rm=TRUE, simplify=T)
+dailysum <- dailysum[!is.na(dailysum)]
+
+
 library(ggplot2)
 Q2<-data.frame(tapply(activity$steps,activity$date,sum,na.rm=TRUE))
 Q2$date<-rownames(Q2)
