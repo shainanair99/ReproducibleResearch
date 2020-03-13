@@ -7,3 +7,11 @@ with(df_ia,
           type="l",
           xlab="5-minute intervals",
           ylab="average steps in the interval across all days"))
+
+
+max_steps <- max(df_ia$avg)
+df_ia[df_ia$avg == max_steps, ]
+
+##     interval   avg
+## 835      835 206.2
+
